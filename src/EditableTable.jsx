@@ -25,7 +25,6 @@ const EditableTable = ({ data }) => {
             <th>Position</th>
             <th>Comment</th>
             <th>Status</th>
-
             <th>Operation</th>
           </tr>
         </thead>
