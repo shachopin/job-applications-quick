@@ -25,6 +25,7 @@ function App() {
           position: doc.data().position,
           status: doc.data().status,
           timestamp: doc.data().timestamp,
+          comment: doc.data().comment
         }))
       );
     });

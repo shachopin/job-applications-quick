@@ -23,12 +23,14 @@ const EditableTable = ({ data }) => {
             <th>Date time</th>
             <th>Company</th>
             <th>Position</th>
+            <th>Comment</th>
             <th>Status</th>
+
             <th>Operation</th>
           </tr>
         </thead>
         <tbody>
-          {data.map(({ id, company, position, status, timestamp }) => (
+          {data.map(({ id, company, position, status, timestamp, comment }) => (
             <tr key={id}>
               <td>
                 <pan>{new Date(timestamp).toLocaleString()}</pan>
@@ -49,6 +51,15 @@ const EditableTable = ({ data }) => {
                   type="text"
                   onChange={(e) => onChangeInput(e, id)}
                   placeholder="Type position"
+                />
+              </td>
+              <td>
+                <input
+                  name="comment"
+                  value={comment}
+                  type="text"
+                  onChange={(e) => onChangeInput(e, id)}
+                  placeholder="Type comment"
                 />
               </td>
               <td>
